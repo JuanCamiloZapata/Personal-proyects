@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class Vacaciones{
+	public static void main(String args[]){
+		
+		Scanner Entrada = new Scanner(System.in);
+		String Nombre = "";
+		int Clave = 0, Labor = 0;
+		
+		System.out.println("-------------------------------------------------------------");
+		System.out.println("|Bienvenido al sistema de calculo vacacional de Fox-E-Sports|");
+		System.out.println("-------------------------------------------------------------" + "\n" + "" + "\n" + "");
+		
+		System.out.print("¿Cuál es el nombre del trabajador?: ");
+		Nombre = Entrada.nextLine();
+		System.out.println("");
+
+		System.out.print("¿Cuánto tiempo de servicio tiene el trabajador?: ");
+		Labor = Entrada.nextInt();
+		System,out.println("");
+
+		System.out.print("¿Cuál es la clave del trabajador?: ");
+		Clave = Entrada.nextInt();
+		System,out.println("");
+
+		if(Clave == 1){
+			
+			if(Labor == 1){
+				System.out.println(Nombre + " tiene derecho a 2 semanas de vacaciones.");
+			} else if(Labor >= 2 && Labor <= 6){
+				System.out.println(Nombre + " tiene derecho a 4 semanas de vacaciones.");
+			} else if(Labor >= 7){
+				System.out.println(Nombre + " tiene derecho a 6 semanas de vacaciones.");
+			} else{
+				System.out.println(Nombre + " no tiene derecho a vacaciones.");
+			}
+
+
+		} else if(Clave == 2){
+
+			if(Labor == 1){
+				System.out.println(Nombre + " tiene derecho a 3 semanas de vacaciones.");
+			} else if(Labor >= 2 && Labor <= 6){
+				System.out.println(Nombre + " tiene derecho a 5 semanas de vacaciones.");
+			} else if(Labor >= 7){
+				System.out.println(Nombre + " tiene derecho a 7 semanas de vacaciones.");
+			} else{
+				System.out.println(Nombre + " no tiene derecho a vacaciones.");
+			}
+
+		} else if(Clave == 3){
+
+			if(Labor == 1){
+				System.out.println(Nombre + " tiene derecho a 4 semanas de vacaciones.");
+			} else if(Labor >= 2 && Labor <= 6){
+				System.out.println(Nombre + " tiene derecho a 6 semanas de vacaciones.");
+			} else if(Labor >= 7){
+				System.out.println(Nombre + " tiene derecho a 8 semanas de vacaciones.");
+			} else{
+				System.out.println(Nombre + " no tiene derecho a vacaciones.");
+			}
+
+		} else{
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			System.out.println("Error, la clave del trabajador no existe.");
+			System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+		}
+		
+	}
+}
